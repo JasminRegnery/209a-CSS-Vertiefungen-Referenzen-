@@ -1,0 +1,65 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>CSS-Referenz</title>
+	<style type="text/css">
+		/*  Das ist ein Tag-Selektor, funktioniert nur bei existierenden Tags; 
+		mehrere Tag-Selektoren werden mit einem Komma getrennt, 
+		Tag-Selektoren werden automatisch bei Aufruf des Tags ausgeführt*/
+	h1 {
+		color: red;
+		}
+	h2, p {
+		color: greenyellow;
+	}
+
+	a {
+		background-color:red;
+		color: white;
+		text-decoration: none;
+			// Der Link soll ohne Unterstrich dargestellt werden nutze dazu (text-decoration)
+	}
+
+	/* Pseudoklassen, höhere Spezifizierung*/
+
+	a:hover { 
+	
+	} 
+	/*wenn man mit der Maus darüber fährt*/
+
+	a:active {
+	
+	}
+	 /*wenn man mit der linken Maustaste drauf drückt*/
+		
+	.bla {
+		color: greenyellow;
+	}
+
+	/* ID-Selektor, der durch eine Raute "#"eingeleitet wird, darf pro Seite nur einmal angewendet werden; Fantasienamen möglich, nur keine Umlaute wie ö, ä; muss im body angewendet werden mit der Zuordnung id="container" */
+	#container { 
+		margin: 50px 30px;
+		padding: 20px;
+		background-color: yellow;
+		width: 600px;
+		height: 400px;
+		border: 10px solid #FF0000;
+		
+	}
+</style>
+</head>
+<body>
+	<h1>Hier kommt <span class="bla">eine </span>Überschrift</h1>
+	
+	<p class="bla">Dies ist ein Absatz </p>
+    
+	<a href="https://moodle.leo-statz-berufskolleg.de/pluginfile.php/301849/mod_page/content/5/CSS-Referenz%20%28Sch%C3%BClervorlage%29.html#">Hier kommt ein Link</a>
+
+	<div id="container">
+        Hier kommt ein DIV-TAG (Container) 
+        <p>
+        <a href="https://moodle.leo-statz-berufskolleg.de/pluginfile.php/301849/mod_page/content/5/CSS-Referenz%20%28Sch%C3%BClervorlage%29.html#">Dieser <span class="bla">Link </span> ist in dem DIV-Tag </a>
+        </p>
+	</div>
+</body>
+</html>
